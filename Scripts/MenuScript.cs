@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//script that manages the main menu features
 public class MenuScript : MonoBehaviour
 {
     public GameObject mainMenuScreen;
@@ -46,18 +47,6 @@ public class MenuScript : MonoBehaviour
         back.gameObject.SetActive(false);
         options.gameObject.SetActive(true);
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     // Enables relevant buttons for each screen
    public void MainMenuScreen()
@@ -90,11 +79,13 @@ public class MenuScript : MonoBehaviour
         options.gameObject.SetActive(true);
     }
 
+//starting a new game
     public void NewStory()
     {
         SceneManager.LoadScene("Scene1", LoadSceneMode.Single);
     }
 
+//chapter selection
    public void ChapterSelectScreen()
     {
         mainMenuScreen.SetActive(false);
@@ -108,17 +99,17 @@ public class MenuScript : MonoBehaviour
         back.gameObject.SetActive(true);
         options.gameObject.SetActive(false);
     }
-
+//first chapter
     public void Katie()
     {
         SceneManager.LoadScene("Scene1", LoadSceneMode.Single);
     }
-
+//seconf chapter
     public void Robin()
     {
         SceneManager.LoadScene("Chapter 2.1", LoadSceneMode.Single);
     }
-    
+//third chapter
     public void Amina()
     {
         float randomScene = Random.value;
@@ -133,7 +124,7 @@ public class MenuScript : MonoBehaviour
             Debug.Log("Good Ending Loaded");
         }
     }
-
+//options
    public void OptionsScreen()
     {
         mainMenuScreen.SetActive(false);
