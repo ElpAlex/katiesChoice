@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//script that makes the audio, vibration and colour settings editable by the player
 public class OptionsScript : MonoBehaviour
 {
     public static bool audioSetting = true;
@@ -14,11 +15,6 @@ public class OptionsScript : MonoBehaviour
 
     // 1 = slow, 2 = medium, 3 = fast
     public static int textSpeedSetting = 2;
-
-    void Awake()
-    {
-         
-    }
 
 
     public void ChangeAudioSettingsON()
